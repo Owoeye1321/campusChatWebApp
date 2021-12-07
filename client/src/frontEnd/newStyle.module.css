@@ -1,0 +1,176 @@
+#inputStyles {
+  width: 200px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+#logDiv {
+  margin-top: 5px;
+  height: 270px;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  width: 290px;
+  border-radius: 15px;
+  background-color: #e0cdf8f8;
+}
+#forgpass {
+  margin-top: 5px;
+  height: 270px;
+  padding-top: 20px;
+  width: 290px;
+  border-radius: 15px;
+}
+#Namestyle {
+  font-size: 20px;
+  margin-top: 40px;
+}
+#forget_password {
+  font-size: 14px;
+  margin-left: 90px;
+  text-decoration: none;
+}
+#createNewSiteInfo {
+  border: 1px solid;
+  border-radius: 10px;
+  margin-top: 9px;
+  width: 290px;
+  padding: 2px 0px 2px 0px;
+}
+#textfont {
+  font-size: 13px;
+}
+#extraLink {
+  text-decoration: none;
+  font-size: 14px;
+}
+#err {
+  font-size: 10px;
+  margin-bottom: 0px;
+}
+#profileDiv {
+  margin-top: 10px;
+  padding-top: 50px;
+}
+#imgStyle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+#segDiv {
+  padding: 30px 30px 20px 20px;
+}
+
+#designDiv {
+  height: max-content;
+  border: 1px solid;
+  border-radius: 30px;
+  border-color: #e0cdf8f8;
+  padding: 30px 20px 20px 20px;
+  box-shadow: 5px 5px 5px 5px #e0cdf8f8;
+}
+#campusText {
+  font-size: 40px;
+  color: #ddc2fff8;
+}
+#ProfileDivTwo {
+  height: 450px;
+  border-radius: 30px;
+  padding: 30px 20px 20px 20px;
+  margin: 30px 10px 20px 10px;
+}
+#mainContainer {
+  width: 70%;
+  height: fit-content;
+  padding: 10px 10px 0px 10px;
+  background-color: #ffffff;
+}
+#contentDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.FloatLeft {
+  float: left;
+}
+.head {
+  height: fit-content;
+}
+.FloatRight {
+  float: right;
+}
+.imgNametitle {
+  float: left;
+  width: max-content;
+}
+#reduceMargin {
+  margin-top: -10px;
+}
+.deptLevel {
+  float: right;
+}
+.post {
+  width: 80%;
+  height: 200px;
+  border: 1px solid;
+  display: flex;
+  margin-left: 10%;
+  margin-bottom: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.countIcon {
+  margin-top: -20px;
+}
+.postNews {
+  width: 90%;
+  height: 200px;
+  border: 1px solid;
+  display: flex;
+  margin-left: 5%;
+  margin-bottom: 10px;
+  align-items: center;
+  justify-content: center;
+}
+#imgIcon {
+  width: 35px;
+  height: 35px;
+  border-radius: 10px;
+}
+#msg {
+  width: 70%;
+  float: left;
+  border: 1px solid;
+  display: flex;
+  margin-left: 10%;
+  margin-bottom: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.msgDiv {
+  width: 80%;
+  height: 200px;
+  border: 1px solid;
+  display: flex;
+  margin-left: 10%;
+  margin-bottom: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.sendMsg {
+  float: left;
+  margin-left: 5px;
+}
+#GeneralColoredText {
+  color: #e0cdf8f8;
+}
+.equalImgDimention {
+  height: 50px;
+  width: 50px;
+}
+#homebg {
+  background-color: #000000;
+  color: #ffffff;
+}
+#logInImgDiv {
+  margin-top: 100px;
+  margin-bottom: 0px;
+}

@@ -1,0 +1,22 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "my chat app server",
+  "main": "index.js",
+  "scripts": {
+    "start": " node server/index.js"
+  },
+  "keywords": [],
+  "author": "cyberxurde",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "formidable": "^2.0.1",
+    "fs": "0.0.1-security",
+    "joi": "^17.4.2",
+    "mysql": "^2.18.1"
+  }
+}
