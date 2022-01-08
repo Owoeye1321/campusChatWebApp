@@ -44,32 +44,36 @@ class EditUserProfile extends Component {
     }
 fileChangeHandler = (event)=>{
    let name = event.target.files[0];
-   this.setState({file:name})  
-   console.log(name)
+   this.setState({file:name},()=>{
+       console.log(this.state.file)
+   }  )                                                                   
+    }                                   
 
-
-    }
-   
-
-    handleSubmit = (event)=>{
+    handleSubmit = (event)=>{                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
         event.preventDefault()
-        alert('Incoming form...')
         const apiUrl = "http://localhost:4001/editProfile";
-        const data = new FormData();
-        data.append('file',this.state.file)
-        data.append('data',this.state.profileDetails);
-        console.log(data);
-        axios({
-            method:"post",
-            url:apiUrl,
-            data:data,
-            headers:{"Content-Type":"multipart/form-data"},
-
-        })
-        .then((res)=>{console.log(res)
-            this.setState({err:res.data})})
-        .catch((err)=>console.log('An error has occured'+err))
-
+      //  const profiledata = JSON.stringify(this.state.profileDetails)   
+      const profileData = new FormData();
+      profileData.append('data',this.state.profileDetails);
+      profileData.append('file',this.state.file)              
+        console.log(profileData);   
+    //    axios.post(apiUrl,profileData)                                                                                         
+    //     .then((res)=>{console.log(res.statusText)
+    //         this.setState({err:res.data},()=>{
+    //             console.log(this.state.err)
+    //         })})
+    //     .catch((err)=>console.log('An error has occured'+err))
+ try {
+     let request =  fetch(apiUrl,{
+         method:"post",
+         body:profileData,
+     })     
+     const response =  request.json()
+     console.log('Response' ,response)
+ } catch (error) {
+     alert('upload failed')
+     console.log("Error uploading file failed" , error)
+ }
     }                                              
 
     render() { 
@@ -92,7 +96,7 @@ fileChangeHandler = (event)=>{
                               <center>
                                    <label style={{width:"100%"}}>
                                    <img id={styles.imgStyle} rel="icon" alt = "" src="/img/user.png"/> 
-                                   <input onChange={this.fileChangeHandler} required type="file" name="file" style={{display:"none"}}/>
+                                   <input onChange={this.fileChangeHandler} required type="file" name="file" />
                                   
                                    </label>
                                    </center>
