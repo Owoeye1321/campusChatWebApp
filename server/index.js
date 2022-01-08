@@ -8,36 +8,14 @@ const fs = require ('fs')
 const path = require('path')
 const formidable = require('formidable');
 PORT = process.env.PORT || 4001;
-app.use(cors());
-app.use(bodyParser.json({type:'*/*'}));
+app.use(bodyParser.json({type:'*/*'}));                                           
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
  const con = mysql.createConnection({
                host:"localhost",
                user:"root",
-               password:"",
-               database:"mychat"
-           })
-app.use((req,res,next)=>{
-    //website you wish to allow to connect
-    res.header("Access-Control-Allow-Origin",'http://localhost:3000');
-
-    //Requested method you wish to allow
-    res.header("Access-Control-Allow-Method",'GET,POST');
-
-    //Request header you wish to allow
-    res.header("Access-Control-Allow-Headers",'X-Requested-Width,content-type');
-
-    //Set to true if you need the website to include cookies in the requests
-    //to the api (e.g in case you use session)
-    res.header("Access-Control-Allow-Credentials",true);
-    next();
-
-})
-
-app.get('/',(req,res)=>{
-    res.send('Hello there! the available api are \'login\' and \'signup\'and \'editProfile\'.')
-})
-
+               password:"", 
+               database:"mychat"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+ })
 app.get('/signup',(req,res)=>{
     res.send('Hello world , this is an api for the signup process')
 })
@@ -116,8 +94,14 @@ app.get('/editprofile',(req,res)=>{
     
 })
 app.post('/editprofile',(req,res)=>{
+   //// console.log(req.body) 
+   const form = new formidable.IncomingForm();         
+   form.parse(req,(err,fields,files)=>{
+       console.log(fields)           
+       console.log(files.file.name)                                                                                         
+   } )                                                                                                                                                                                                   
                                       
     })       
 app.listen(PORT,()=>{
-    console.log('Listening to port' +" "+  PORT)
+    console.log('Listening to port' +" "+  PORT)  
 })                                                   
