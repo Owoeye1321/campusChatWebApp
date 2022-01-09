@@ -51,7 +51,7 @@ fileChangeHandler = (event)=>{
 
     handleSubmit = (event)=>{                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
         event.preventDefault()
-        const apiUrl = "http://localhost:4001/editProfile";
+        const apiUrl = "http://localhost:4001/editprofile";
       //  const profiledata = JSON.stringify(this.state.profileDetails)   
       const profileData = new FormData();
       profileData.append('data',this.state.profileDetails);
